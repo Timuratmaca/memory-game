@@ -2,6 +2,19 @@ let newgame=document.getElementById("newgame")
 let symbols="qwertyuıopğüasdfghjklşizxcvbnmöç.7410,236985"
 symbols =symbols.split("")
 console.log(symbols);
+let images=[]
+let game=document.getElementById("game")
+
+for (let x=0;x<8;x=x+1){
+    images.push("image ("+x+").png")
+    images.push("image ("+x+").png")
+    console.log(images);
+}
+for(let u=0;u<16;u=u+1){
+    let card=document.createElement("img")
+    card.src=images[u]
+    game.appendChild(card)
+}
 
 
 function down() {

@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 span{
     /* border: 1px solid green; */
@@ -11,9 +11,14 @@ span{
 #game{
     background-color:white;
     width: 500px;
-    height:500px;
     /* text-align: center; */
-    text-align: center;    
+    text-align: center; 
+    margin:auto;   
+    font-size: 0;
+}
+img{
+    width: 25%;
+    
 }
 h2{
     color: aquamarine;

@@ -1,17 +1,18 @@
-chikel
-1,2,4,8,16
-32
-64
-128
-256
-
-.
-.
-.
-.
-.
-.
-1024
+proçitat kod i abosnit kajduyu stroçku
+vreme
 
 
-12logow
+
+
+
+
+
+
+
+
+
+src=eto atribud v img gde nujna napisat nazvaniye kartinki
+createElement=zdelat teg
+push=zapehnut elemenet v masiv
+appendChild=stobı dabavit teg v drugoy teg
+font-size=razmer bukv
