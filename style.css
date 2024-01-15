@@ -1,6 +1,8 @@
 body{
     background-color: black;
     /* overflow: hidden; */
+    text-align: center;
+    font-family: sans-serif;
 }
 span{
     /* border: 1px solid green; */
@@ -9,17 +11,118 @@ span{
     /* transition: 2s; */
 }
 #game{
-    background-color:white;
+    background: rgb(255,115,115);
+    background: radial-gradient(circle, rgba(255,115,115,1) 0%, rgba(36,86,198,1) 100%);
     width: 500px;
     /* text-align: center; */
     text-align: center; 
     margin:auto;   
     font-size: 0;
+    
+}
+#time{
+    display: flex;
+    /* align-items: start; */
+    justify-content: center;
+
 }
 img{
-    width: 25%;
-    
+    width: calc(25% - 6px) ;
+    object-fit: contain;
+    margin: 3px;
+    transition: 0.3s;
 }
 h2{
     color: aquamarine;
+}
+.shake{
+    animation: 0.2s 3 shake;
+    animation-timing-function: linear;
+}
+#loading{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: invert(1);
+    transition: 2s;
+}
+#loading img,#loading p{
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+#loading img{
+    animation: 1s infinite spin;
+    animation-timing-function: linear;
+}
+#newgame{
+    margin-top: 10px;
+    display:inline-block ;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(255,233,0);
+    background: linear-gradient(90deg, rgba(255,233,0,1) 0%, rgba(213,60,60,1) 14%, rgba(95,121,228,1) 36%, rgba(255,233,0,1) 50%, rgba(213,60,60,1) 64%, rgba(95,121,228,1) 86%, rgba(255,233,0,1) 100%);
+    background-position: left;
+    background-size: 200% 100%;
+    animation: 1s infinite newgame ;
+    box-shadow: 0 0 10px white;
+    width: 10%;
+    animation-timing-function: linear;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.592);
+    transition: 1s;
+}
+#newgame:hover{
+    /* width:12%; */
+    /* animation-duration: 2s; */
+    transform: rotate(5deg);
+}
+
+@keyframes newgame {
+    0%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+#loading p{
+    transform: translate(-50%,calc(-50% + 20px));
+    font-size: larger;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes spin{
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
 }
