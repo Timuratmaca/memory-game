@@ -12,6 +12,7 @@ let opencards=[]
 let loading=document.getElementById("loading")
 let otk=0
 
+
 // todo çerez 1s zagruzka prpodayet
 setTimeout(() => {
     loading.style.opacity="0"
@@ -112,7 +113,17 @@ down();
     }, 1000);
 
 
-
+newgame.onclick=function (event) {
+    let cards=game.children
+    for(let c of cards ){
+        c.style.transform="scaleX(0)"
+        setTimeout(()=>{
+            c.src="card.jpg"
+            c.style.transform="scaleX(1)"
+            c.style.pointerEvents="auto"
+        },1000)
+    }
+}
 // newgame.onclick=function (event){
 //     event.preventDefault();
 //     for(let i=10;i<110;i=i+10){

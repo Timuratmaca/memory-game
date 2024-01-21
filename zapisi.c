@@ -1,5 +1,5 @@
 sozdat knopku novaya igra 
-yesli yiyo najat to vse kartaçki zakroyutsa
+yesli yiyo najat to vse kartaçki zakroyutsaw
 
 
 
