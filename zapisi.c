@@ -1,5 +1,5 @@
-sozdat knopku novaya igra 
-yesli yiyo najat to vse kartaçki zakroyutsaw
+dobavit komentariyi
+vreme na 0 onclicke
 
 
 

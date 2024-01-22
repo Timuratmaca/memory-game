@@ -7,45 +7,54 @@ let game=document.getElementById("game")
 let time=document.getElementById("time")
 let tanks=["BT-7","BT-5","BT-7M","Cy-76M","T-28e","3NC-30","BT-34","BT-343"]
 let speed=["30 km/S",] 
-// todo etot masiv derjet atkrıtıye kartoçki
+// todo/ etot masiv derjet atkrıtıye kartoçki
 let opencards=[]
 let loading=document.getElementById("loading")
 let otk=0
 
 
-// todo çerez 1s zagruzka prpodayet
+
+// todo/ çerez 1s zagruzka prpodayet
 setTimeout(() => {
     loading.style.opacity="0"
     loading.style.pointerEvents="none"
 }, 1000);
-// todo masiv imges zapalnayetsa nazvanyami kartinak
+// todo/ masiv imges zapalnayetsa nazvanyami kartinak
 for (let x=0;x<8;x=x+1){
     images.push("image ("+x+").png")
     images.push("image ("+x+").png")
     console.log(images);
 }
-for (let i =images.length-1;i>0;i--){
-    let randomnumber=Math.floor(Math.random()*(i+1))
-    let slot=images[i]
-    images[i]=images[randomnumber]
-    images[randomnumber]=slot
+function randomi(params) {
+    for (let i =images.length-1;i>0;i--){
+        let randomnumber=Math.floor(Math.random()*(i+1))
+        let slot=images[i]
+        images[i]=images[randomnumber]
+        images[randomnumber]=slot
+    }
 }
-// todo sazdayot kartinki 
+randomi()
+    
+// todo/ sazdayot kartinki 16 raz
 for(let u=0;u<16;u=u+1){
+    // todo/ sozdayot
     let card=document.createElement("img")
     card.src="card.jpg"
+    // todo/ dobavlayet rebönka v teg game
     game.appendChild(card)
     card.style.height=(card.offsetWidth+"px")
     card.onclick=function (event) {
+
         card.style.pointerEvents="none"
-        // console.log("BT7num"+(u+1));
+        // todo/ dobavlayet v opencards card
         opencards.push(card)
+        // todo/ perevaraçevayet card na bok
         card.style.transform="scaleX(0)"
+        // todo/ jdöt 300mls i dealyet eti ifi
         setTimeout(() => {
             card.src=images[u]
             card.style.transform="scaleX(1)"
             if (opencards.length==2) {
-                // console.log(opencards[0].src,opencards[1].src);
                 if (opencards[0].src==opencards[1].src) {
                     console.log("yes");
                     opencards=[];
@@ -108,10 +117,9 @@ down();
 
     let gametimer=setInterval(() => {
         t=t+1
-        time.innerHTML=t
+        time.innerHTML="Time: "+t
 
     }, 1000);
-
 
 newgame.onclick=function (event) {
     let cards=game.children
@@ -123,13 +131,14 @@ newgame.onclick=function (event) {
             c.style.pointerEvents="auto"
         },1000)
     }
+    randomi()
+    t=0
 }
-// newgame.onclick=function (event){
-//     event.preventDefault();
-//     for(let i=10;i<110;i=i+10){
-//         console.log("planet:"+i);
-//     }
-// }
+
+function cardson(event) {
+    console.log(slot)
+}
+
 for(let o=2;o<2000;o=o*2){
     console.log(o)
 }
@@ -143,15 +152,4 @@ for (let t=0 ;t<9; t=t+1){
 
 
 
-// for (let o=1000;o>100;o=o-300){
-//     console.log(o);
-// }
 
-
-
-
-
-
-// for(let i=-100;i<10;i=i+1){
-//     console.log(i);
-// }

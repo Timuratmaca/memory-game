@@ -24,7 +24,7 @@ span{
     display: flex;
     /* align-items: start; */
     justify-content: center;
-
+    color: rgb(0, 255, 217);
 }
 img{
     width: calc(25% - 6px) ;
@@ -56,11 +56,16 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
+}
+#MG{
+    color: white;
 }
 #loading img{
     animation: 1s infinite spin;
     animation-timing-function: linear;
+}
+#leftstage{
+    display:inline-block;
 }
 #newgame{
     margin-top: 10px;
@@ -83,9 +88,7 @@ h2{
     transition: 1s;
 }
 #newgame:hover{
-    /* width:12%; */
-    /* animation-duration: 2s; */
-    transform: rotate(5deg);
+    box-shadow: 0 0 20px rgb(255, 0, 0);
 }
 
 @keyframes newgame {
