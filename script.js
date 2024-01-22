@@ -103,13 +103,14 @@ function down() {
         letter.style.transition=t+"s"
         letter.style.left=Math.random()*window.innerWidth+"px";
         letter.style.bottom=window.innerHeight+"px";
+        letter.style.filter="hue-rotate("+Math.random()*360+"deg)"
         setTimeout(()=>{
             letter.style.bottom=-50+"px"
             setTimeout(()=> {
                 letter.remove()
-            },t)
+            },t*1000)
         },1000);
-    },1000);
+    },10);
 }
 down();
 
