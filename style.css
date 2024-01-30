@@ -20,6 +20,9 @@ span{
     font-size: 0;
     
 }
+label{
+    color: white;
+}
 #time{
     display: flex;
     /* align-items: start; */

@@ -1,7 +1,7 @@
 kartinki sobak
 masiv budet
 
-
+ time ne menayetsa
 
 position:fixed =zafeksirovat teg na starince.teg nakladvayetsa na drugiye tegi
 // !sposab postavit absolutnıy teg po centru 

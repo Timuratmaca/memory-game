@@ -14,16 +14,25 @@ let otk=0
 let MG=document.getElementById("MG")
 
 
+
 // todo/ çerez 1s zagruzka prpodayet
 setTimeout(() => {
     loading.style.opacity="0"
     loading.style.pointerEvents="none"
 }, 1000);
-// todo/ masiv imges zapalnayetsa nazvanyami kartinak
-for (let x=0;x<8;x=x+1){
-    images.push("image ("+x+").png")
-    images.push("image ("+x+").png")
-    console.log(images);
+function arrayrefresh(imageName) {
+    let ext=".jpg"
+    if (imageName=="image"){
+        ext=".png"
+    }
+    // todo/ masiv imges zapalnayetsa nazvanyami kartinak
+    images=[]
+    for (let x=0;x<8;x=x+1){
+        images.push(imageName+" ("+x+").jpg")
+        images.push(imageName+" ("+x+").jpg")
+        console.log(images);
+    }
+    randomi()
 }
 function randomi(params) {
     for (let i =images.length-1;i>0;i--){
@@ -33,8 +42,7 @@ function randomi(params) {
         images[randomnumber]=slot
     }
 }
-randomi()
-    
+arrayrefresh("dog")  
 // todo/ sazdayot kartinki 16 raz
 for(let u=0;u<16;u=u+1){
     // todo/ sozdayot
