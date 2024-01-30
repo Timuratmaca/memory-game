@@ -11,7 +11,7 @@ let speed=["30 km/S",]
 let opencards=[]
 let loading=document.getElementById("loading")
 let otk=0
-
+let MG=document.getElementById("MG")
 
 
 // todo/ çerez 1s zagruzka prpodayet
@@ -121,7 +121,7 @@ down();
         time.innerHTML="Time: "+t
 
     }, 1000);
-
+    
 newgame.onclick=function (event) {
     let cards=game.children
     for(let c of cards ){
@@ -135,6 +135,7 @@ newgame.onclick=function (event) {
     randomi()
     t=0
 }
+
 
 function cardson(event) {
     console.log(slot)
@@ -150,7 +151,23 @@ for (let t=0 ;t<9; t=t+1){
     let tanksscore=tanks[t]+speed[0]
     console.log(tanksscore)
 }
+let mg=0
+MG.onclick=function (event){
+    mg=mg+1
+    if (10==mg){
+        let cards=game.children
+        let u=0
+        for(let c of cards ){
 
+            c.style.transform="scaleX(0)"
+            setTimeout(()=>{
+                c.src=images[u]
+                u=u+1
+                c.style.transform="scaleX(1)"
+            },1000)
+        }
+        clearInterval(gametimer)
+    }
 
-
+}
 
