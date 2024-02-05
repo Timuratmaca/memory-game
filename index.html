@@ -14,9 +14,9 @@
 
     <h1 id="MG">MEMORY GAME </h1>
     <h2 id="time">time</h2>
-      <input type="radio" id="languages" name="fav_language" value="HTML" checked="checked">
+      <input type="radio" id="languages" name="fav_language" value="HTML" onchange="arrayrefresh(`image`)" checked="checked">
       <label for="languages">languages</label><br>
-      <input type="radio" id="dogs" name="fav_language" value="CSS">
+      <input type="radio" id="dogs" name="fav_language" value="CSS" onchange="arrayrefresh(`dog`)">
       <label for="dogs">dogs</label><br>
     <div id="game">
     </div>
